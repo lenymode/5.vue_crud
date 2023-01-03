@@ -24,8 +24,8 @@ class SkillRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'slug' => 'required',
+            'name' => 'required|unique:skills',
+            'slug' => 'required|unique:skills',
         ];
     }
 }

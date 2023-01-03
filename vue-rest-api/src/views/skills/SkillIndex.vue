@@ -11,7 +11,7 @@ onMounted (() => getSkills());
 
     <div class="mt-12" >
         <div class="flex justify-end m-2 p-2">
-            <RouterLink :to="{ name: 'SkillCreate' }" class="px-4 py-2 bg-indigo-700 hover:bg-indigo-800 rounded text-white">Add Skill</RouterLink>
+            <RouterLink :to="{ name: 'SkillCreate' }" class="px-4 py-2 bg-green-600 hover:bg-green-700 rounded text-white">Add Skill</RouterLink>
         </div>
 <div class="overflow-x-auto relative">
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -37,8 +37,11 @@ onMounted (() => getSkills());
                 <td class="py-4 px-6">
                     {{ skill.slug }}
                 </td>
-                <td class="py-4 px-6">
-                    Edit/Delete
+                <td class="py-4 px-6 space-x-2">
+                    <RouterLink :to="{ name: 'SkillEdit', params: {id: skill.id} }" class="px-4 py-2 bg-blue-400 hover:bg-blue-500 rounded text-white">View</RouterLink>
+                    
+                    <RouterLink :to="{ name: 'SkillEdit', params: {id: skill.id} }" class="px-4 py-2 bg-blue-600 hover:bg-blue-800 rounded text-white">Edit</RouterLink>
+                    <button class="px-4 py-2 bg-red-600 hover:bg-red-800 rounded text-white"> Delete </button>
                 </td>
                
             </tr>

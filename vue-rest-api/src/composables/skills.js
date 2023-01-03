@@ -29,8 +29,8 @@ export default function useSkills() {
 
         } catch (error) {
 
-            if (error.response.statu === 422) {
-                ErrorCodes.value = error.response.data.errors;
+            if (error.response.status === 422) {
+                errors.value = error.response.data.errors;
             }
         }
     };
@@ -43,7 +43,7 @@ export default function useSkills() {
 
         } catch (error) {
 
-            if (error.response.statu === 422) {
+            if (error.response.status === 422) {
                 ErrorCodes.value = error.response.data.errors;
             }
         }
