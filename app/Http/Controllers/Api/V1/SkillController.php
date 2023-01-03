@@ -17,7 +17,7 @@ class SkillController extends Controller
      */
     public function index()
     {
-        return SkillResource::collection(Skill::paginate(1));
+        return SkillResource::collection(Skill::all());
     }
 
     /**
@@ -83,8 +83,9 @@ class SkillController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Skill $skill)
     {
-        //
+        $skill->delete();
+        return response()->json("skill deleted");
     }
 }

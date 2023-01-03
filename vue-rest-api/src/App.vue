@@ -1,0 +1,21 @@
+<script setup>
+import { RouterLink, RouterView } from 'vue-router'
+
+</script>
+
+<template>
+  <header>
+    <div class="max-w-7xl pt-5 mx-auto">
+      <nav class="m-2 p-2">
+        <RouterLink class="px-4 py-2 mr-4 bg-indigo-700 hover:bg-indigo-900 rounded text-white" to="/">Home</RouterLink>
+        <RouterLink class="px-4 py-2 mr-4 bg-indigo-700 hover:bg-indigo-900 rounded text-white" to="/skills">Skills</RouterLink>
+      </nav>
+    </div>
+  </header>
+
+ <main class="max-w-7xl mx-auto min-h-screen">
+  <RouterView/>
+ </main>
+</template>
+
+
