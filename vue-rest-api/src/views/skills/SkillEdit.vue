@@ -16,7 +16,7 @@
 </script>
 
 <template>
-    <form  class="max-w-md mx-auto p-4 bg-white shadow-md rounded-m" @submit.prevent="updateSkill($route.params.id)">
+    <form  class="max-w-md mx-auto p-4 bg-white shadow-md rounded-md" @submit.prevent="updateSkill($route.params.id)">
         <div class="space-y-6">
             <div class="mb-6">
                 <label for="name" class="block mb-2 text-sm font-medium text-gray-400 dark:text-black">Name</label>

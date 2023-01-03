@@ -50,14 +50,14 @@ export default function useSkills() {
         }
     };
 
-    const destroySkill = async () => {
+    const destroySkill = async (id) => {
 
         if(!window.confirm("Are you sure?")){
             return;
         }
         await axios.delete("skills/" + id);
         await getSkills();
-    }
+    };
 
     return {
         skill,

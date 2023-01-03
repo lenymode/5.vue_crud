@@ -41,9 +41,9 @@ const submit = () => {
                 <Input id="email" type="email" class="mt-1 block w-full" v-model="form.email" required autofocus autocomplete="username" />
             </div>
 
-            <div class="mt-4">
+            <div class="mt-4 bg-black">
                 <BreezeLabel for="password" value="Password" />
-                <Input id="password" type="password" class="mt-1 block w-full" v-model="form.password" required autocomplete="current-password" />
+                <Input id="password" type="password" class="mt-1 block w-full bg-slate-400 hover:bg-green-300" v-model="form.password" required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
@@ -54,7 +54,7 @@ const submit = () => {
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-gray-600 hover:text-gray-900">
+                <Link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm text-black-500 hover:text-green-900">
                     Forgot your password?
                 </Link>
 

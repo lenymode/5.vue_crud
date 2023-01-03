@@ -2,7 +2,7 @@
 import useSkills from '../../composables/skills';
 import { onMounted } from "vue";
 
-const { skills, getSkills} = useSkills();
+const { skills, getSkills, destroySkill} = useSkills();
 
 onMounted (() => getSkills());
 
@@ -24,7 +24,7 @@ onMounted (() => getSkills());
                     Slug
                 </th>
                 <th scope="col" class="py-3 px-6">
-                   Action
+                    Action
                 </th>
             </tr>
         </thead>
@@ -39,9 +39,9 @@ onMounted (() => getSkills());
                 </td>
                 <td class="py-4 px-6 space-x-2">
                     <RouterLink :to="{ name: 'SkillEdit', params: {id: skill.id} }" class="px-4 py-2 bg-blue-400 hover:bg-blue-500 rounded text-white">View</RouterLink>
-                    
+
                     <RouterLink :to="{ name: 'SkillEdit', params: {id: skill.id} }" class="px-4 py-2 bg-blue-600 hover:bg-blue-800 rounded text-white">Edit</RouterLink>
-                    <button class="px-4 py-2 bg-red-600 hover:bg-red-800 rounded text-white"> Delete </button>
+                    <button @click="destroySkill(skill.id)" class="px-4 py-2 bg-red-600 hover:bg-red-800 rounded text-white"> Delete </button>
                 </td>
                
             </tr>
